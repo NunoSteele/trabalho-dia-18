@@ -1,0 +1,85 @@
+1-      Implemente o algoritmo de ordenação Bubble Sort usando Python:
+
+python
+
+Copy code
+
+def bubble_sort(lista):
+
+    n = len(lista)
+
+ 
+
+    # Percorre todos os elementos da lista
+
+    for i in range(n - 1):
+
+        # Últimos i elementos estão ordenados, então não precisamos considerá-los
+
+        for j in range(0, n - i - 1):
+
+            # Compara elementos adjacentes
+
+            if lista[j] > lista[j + 1]:
+
+                # Troca os elementos se estiverem na ordem errada
+
+                lista[j], lista[j + 1] = lista[j + 1], lista[j]
+
+ 
+
+# Exemplo de uso
+
+minha_lista = [64, 25, 12, 22, 11]
+
+print("Lista não ordenada:", minha_lista)
+
+ 
+
+# Aplica o Bubble Sort
+
+bubble_sort(minha_lista)
+
+ 
+
+print("Lista ordenada:", minha_lista)
+
+No exemplo acima, a função bubble_sort recebe uma lista como parâmetro e a ordena usando o algoritmo Bubble Sort. Este algoritmo compara elementos consecutivos e efetua permutações caso estejam fora de ordem, iterando esse processo até que a totalidade da sequência esteja devidamente organizada.
+
+ 
+
+ 
+
+A demonstração de aplicação ilustra como empregar o algoritmo em um conjunto particular. Note que o Bubble Sort não é o método mais eficiente para grandes conjuntos de dados, contudo, é útil para propósitos educacionais e para a compreensão dos princípios de ordenação.
+
+User
+
+2-       implemente um algoritmo que imprima apenas as vogais de uma
+
+determinada palavra ou frase:
+
+python
+
+Copy code
+
+def imprime_vogais(frase):
+
+    vogais = "aeiouAEIOU"
+
+    vogais_presentes = [letra for letra in frase if letra in vogais]
+
+   
+
+    print("Vogais na frase:", "".join(vogais_presentes))
+
+ 
+
+# Exemplo de uso
+
+frase_input = input("Digite uma palavra ou frase: ")
+
+imprime_vogais(frase_input)
+
+No exemplo acima, a função mostra_vogais recebe uma expressão como entrada. Utilizando uma lista de compreensão, ela escolhe somente as letras que são vogais da expressão original e as exibe como uma cadeia de caracteres. O programa pede que o usuário insira uma palavra ou frase para avaliar a função.
+
+Por exemplo, se você inserir "Olá, mundo!", a saída será "Oaouo", que são as vogais existentes na frase.
